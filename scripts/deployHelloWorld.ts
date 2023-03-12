@@ -1,6 +1,6 @@
 import { ethers } from 'hardhat'
 
-async function main(): Promise<void> {
+async function main() {
     const initialMessage = 'Hello World'
 
     const HelloWorld = await ethers.getContractFactory('HelloWorld')

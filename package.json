@@ -9,17 +9,24 @@
     "compile:force": "npx hardhat compile --force",
     "solhint": "solhint contracts/**/*.sol",
     "prettier": "prettier --write \"**/*.{ts,js,sol}\"",
-    "lint": "TODO"
+    "lint": "npx eslint . --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "eslint": "^8.36.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
     "hardhat": "^2.13.0",
     "prettier": "^2.8.4",
     "prettier-plugin-solidity": "^1.1.3",
     "solhint": "^3.4.1",
-    "solhint-plugin-prettier": "^0.0.5"
-    }
+    "solhint-plugin-prettier": "^0.0.5",
+    "typescript": "^4.9.5"
+  }
 }

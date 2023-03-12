@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import hre from 'hardhat'
-import { HelloWorld__factory } from '../typechain-types/index.js'
+import type { HelloWorld__factory } from '../typechain-types/index.js'
 
 describe('HelloWorld Tests', () => {
     let HelloWorld: HelloWorld__factory
