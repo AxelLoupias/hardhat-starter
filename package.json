@@ -9,7 +9,8 @@
     "compile:force": "npx hardhat compile --force",
     "solhint": "solhint contracts/**/*.sol",
     "prettier": "prettier --write \"**/*.{ts,js,sol}\"",
-    "lint": "npx eslint . --fix"
+    "lint": "npx eslint . --fix",
+    "coverage":"npx hardhat coverage"
   },
   "keywords": [],
   "author": "",
