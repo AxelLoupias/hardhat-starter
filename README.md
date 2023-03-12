@@ -1,5 +1,4 @@
-
-# hardhat-starter
+# Hardhat-starter
 
 ## Description
 
