@@ -10,7 +10,7 @@
     "solhint": "solhint contracts/**/*.sol",
     "prettier": "prettier --write \"**/*.{ts,js,sol}\"",
     "lint": "npx eslint . --fix",
-    "coverage":"npx hardhat coverage"
+    "coverage": "npx hardhat coverage"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-config-standard-with-typescript": "^34.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
