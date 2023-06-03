@@ -1,24 +1,28 @@
 import { expect } from 'chai'
-import hre from 'hardhat'
-import type { HelloWorld__factory } from '../typechain-types/index.js'
+import { loadFixture } from '@nomicfoundation/hardhat-network-helpers'
+import { ethers } from 'hardhat'
+import { type HelloWorld } from '../typechain-types/index.js'
 
 describe('HelloWorld Tests', () => {
-    let HelloWorld: HelloWorld__factory
+    let helloWorld: HelloWorld
+    const initialMessage = 'Hello World'
 
-    before(async () => {
-        HelloWorld = await hre.ethers.getContractFactory('HelloWorld')
+    async function deployFixture(): Promise<void> {
+        helloWorld = await ethers
+            .getContractFactory('HelloWorld')
+            .then(async (contract) => await contract.deploy(initialMessage))
+    }
+
+    beforeEach(async () => {
+        await loadFixture(deployFixture)
     })
 
     it('test initial value', async function () {
-        const initialMessage = 'Hello World'
-        const helloWorld = await HelloWorld.deploy(initialMessage)
         expect(await helloWorld._message()).to.equal(initialMessage)
     })
 
     it('test update message and retrieving updated message', async function () {
         const newMessage = 'New message'
-        const initialMessage = 'Hello World'
-        const helloWorld = await HelloWorld.deploy(initialMessage)
         await helloWorld.updateMessage(newMessage)
         expect(await helloWorld._message()).to.equal(newMessage)
     })
