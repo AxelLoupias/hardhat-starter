@@ -9,6 +9,7 @@
     "compile:force": "npx hardhat compile --force",
     "solhint": "solhint contracts/**/*.sol",
     "prettier": "prettier --write \"**/*.{ts,js,sol}\"",
+    "fix": "npm run prettier; npm run lint",
     "lint": "npx eslint . --fix",
     "coverage": "npx hardhat coverage"
   },
@@ -30,5 +31,8 @@
     "solhint": "^3.4.1",
     "solhint-plugin-prettier": "^0.0.5",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0"
   }
 }
