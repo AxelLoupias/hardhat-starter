@@ -6,11 +6,11 @@ async function main() {
     const HelloWorld = await ethers.getContractFactory('HelloWorld')
     const helloWorld = await HelloWorld.deploy(initialMessage)
 
-    await helloWorld.deployed()
+    await helloWorld.waitForDeployment()
 
     console.log(
         `HelloWorld with initialMessage: ${await helloWorld._message()} and deployed to ${
-            helloWorld.address
+            await helloWorld.getAddress()
         }`
     )
 }
