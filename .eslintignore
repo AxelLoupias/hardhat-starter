@@ -1,4 +1,4 @@
 /**/*.js
-/**/*d.ts
+/**/*.d.ts
 package.json
 typechain-types/
