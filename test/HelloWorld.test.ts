@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import { loadFixture } from '@nomicfoundation/hardhat-network-helpers'
 import { ethers } from 'hardhat'
-import { type HelloWorld } from '@typechain/HelloWorld'
+import { type HelloWorld } from '@contracts/HelloWorld'
 
 describe('HelloWorld Tests', () => {
 	let helloWorld: HelloWorld

@@ -8,7 +8,7 @@
 		"skipLibCheck": true,
 		"resolveJsonModule": true,
 		"paths": {
-			"@typechain/*": [
+			"@contracts/*": [
 				"./typechain/*",
 				"./typechain/index.ts"
 			],

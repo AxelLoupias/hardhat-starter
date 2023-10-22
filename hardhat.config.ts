@@ -15,7 +15,6 @@ const config: HardhatUserConfig = {
 	mocha: {
 		timeout: 1000000,
 	},
-	// @ts-expect-error Bug hardhat types
 	typechain: {
 		outDir: './typechain',
 	},
