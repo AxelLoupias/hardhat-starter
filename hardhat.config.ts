@@ -1,6 +1,7 @@
 import type { HardhatUserConfig } from 'hardhat/config'
 import '@nomicfoundation/hardhat-toolbox'
 import 'tsconfig-paths/register'
+import 'hardhat-contract-signatures'
 
 const config: HardhatUserConfig = {
 	solidity: {
@@ -17,6 +18,11 @@ const config: HardhatUserConfig = {
 	},
 	typechain: {
 		outDir: './typechain',
+	},
+	contractSignature: {
+		functionsColumns: ['selector', 'sign:minimal'],
+		eventsColumns: ['sign:minimal'],
+		errorsColumns: ['sign:minimal'],
 	},
 }
 
